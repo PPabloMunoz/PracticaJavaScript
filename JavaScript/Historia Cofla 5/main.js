@@ -1,37 +1,40 @@
 
-// let operacion = prompt("Puedes: 1: sumar, 2: restar, 3: multiplicar, 4: dividir, 5: potencia, 6: raiz cuadrada o 7: raiz cubica")
-// if(operacion != null){
-//     if (operacion == 5 || operacion == 6 || operacion == 7){
-//         var num3 = parseInt(prompt(`Numero`))
-//     } else if (operacion > 7){
-//     } else {
-//         var num1 = parseInt(prompt(`Numero 1`))
-//         var num2 = parseInt(prompt(`Numero 2`))
-//     }
-// }
 
-//     if (operacion == 1) {
-//         resultado = num1 + num2;
-//         alert(`El resultado es ${resultado}`);
-//     }else if (operacion == 2) {
-//         resultado = num1 - num2;
-//         alert(`El resultado es ${resultado}`);
-//     }else if (operacion == 3) {
-//         resultado = num1 * num2;
-//         alert(`El resultado es ${resultado}`);
-//     }else if (operacion == 4) {
-//         resultado = num1 / num2;
-//         alert(`El resultado es ${resultado}`);
-//     } else if (operacion == 5) {
-//         elevar = prompt('¿A que número la quieres elevar?');
-//         alert(`El resultado es ${num3 ** elevar}`)
-//     } else if (operacion == 6) {
-//         alert(`El resultado de la raiz cuadrada es ${Math.sqrt(num3)}`)
-//     } else if (operacion == 7 || operacion == "raiz cúbica") {
-//         alert(`El resultado de la raiz cúbica es ${Math.cbrt(num3)}`)
-//     } else {
-//         alert("no se ha encontrado la operacion")
-//     }
+console.time()
 
+const materias = {
+    fisica : [90, 6, 3],
+    mates : [90, 8, 2],
+    quimica: [92, 8, 4],
+    programacion: [75, 7, 4],
+    logica: [92, 8, 4],
+    calculo: [91, 6, 3],
+    biología: [75, 9, 2],
+    algebra: [100, 10, 4],
+};
 
+const asistencias = () => {
+    for (materia in materias) {
+        let asistencias = materias[materia][0];
+        let promedio = materias[materia][1];
+        let trabajos = materias[materia][2];
+        console.log(`${materia}: `)
+        if (asistencias < 90) {
+            console.log("%cSuspenso", "color: red; padding: 10px 50px; border: 2px solid pink")
+        } else {
+            if (promedio < 7) {
+                console.log("%cSuspenso", "color: red; padding: 10px 50px; border: 2px solid pink")
+            } else {
+                if (trabajos < 3) {
+                    console.log("%cSuspenso", "color: red; padding: 10px 50px; border: 2px solid pink")
+                } else {
+                    console.log("%cAprobado", "color: green; padding: 10px 50px; border: 2px solid pink")
 
+                }
+            }
+        }
+    }
+}
+
+asistencias()
+console.timeEnd()
