@@ -43,8 +43,6 @@
 
 
 
-
-
 // let movil1 = new movil("rojo", "192gr", "1080p", "10MP", "3GB")
 // let movil2 = new movil("naraja", "180gr", "720p", "20MP", "4GB")
 // let movil3 = new movil("amarillo", "200gr", "1080p", "15MP", "6GB")

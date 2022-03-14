@@ -1,0 +1,19 @@
+.giro {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(138, 138, 138);
+    border-radius: 50%;
+    border-left-color: #000;
+    margin-right: 20px;
+    animation: giro 1.2s linear infinite;
+    -webkit-animation: giro 1.2s linear infinite;
+}
+
+@keyframes giro {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+}
+}

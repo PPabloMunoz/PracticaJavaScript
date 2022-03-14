@@ -1,4 +1,32 @@
 
-let modified = document.querySelector(".input");
+let titulo = document.querySelector(".titulo");
 
-modified.setAttribute("type", "text");
+let input = document.querySelector(".input");
+
+
+input.placeholder = "te reviento flaco";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
