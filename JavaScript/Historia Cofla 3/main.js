@@ -33,48 +33,48 @@
 //         alert(`Video grabado`)
 //     }
 //     movilInfo(){
-//         `Es ${color} <br>
-//         Pesa ${peso} <br>
-//         Tiene una resolucion de ${resolucion} <br>
-//         Con una camara de ${camara} <br>
-//         Y ${ram} de RAM <br>`;
+//         return `Es ${this.color} <br>
+//         Pesa ${this.peso} <br>
+//         Tiene una resolucion de ${this.resolucion} <br>
+//         Con una camara de ${this.camara} <br>
+//         Y ${this.ram} de RAM <br>`;
 //     }
 //     }
 
 
 
-// let movil1 = new movil("rojo", "192gr", "1080p", "10MP", "3GB")
-// let movil2 = new movil("naraja", "180gr", "720p", "20MP", "4GB")
-// let movil3 = new movil("amarillo", "200gr", "1080p", "15MP", "6GB")
+// let movil1 = new movil("rojo", "192gr", "1080p", "10MP", "3GB");
+// let movil2 = new movil("naraja", "180gr", "720p", "20MP", "4GB");
+// let movil3 = new movil("amarillo", "200gr", "1080p", "15MP", "6GB");
 
-// movil1.botonEncender();
-// movil1.tomarFotos();
-// movil1.grabarVideos();
-// movil1.reiniciar();
-// movil1.botonEncender();
-
-
+// // movil1.botonEncender();
+// // movil1.tomarFotos();
+// // movil1.grabarVideos();
+// // movil1.reiniciar();
+// // movil1.botonEncender();
 
 
-// document.write("Movil 1 <br>")
-// document.write("<br>")
-// document.write(movil1.info)
 
-// document.write("<br>")
-// document.write("<br>")
-// document.write("<br>")
 
-// document.write("Movil 2 <br>")
-// document.write("<br>")
-// document.write(movil2.info)
+// document.write("Movil 1 <br>");
+// document.write("<br>");
+// document.write(movil1.movilInfo());
 
-// document.write("<br>")
-// document.write("<br>")
-// document.write("<br>")
+// document.write("<br>");
+// document.write("<br>");
+// document.write("<br>");
 
-// document.write("Movil 3 <br>")
-// document.write("<br>")
-// document.write(movil3.info)
+// document.write("Movil 2 <br>");
+// document.write("<br>");
+// document.write(movil2.movilInfo());
+
+// document.write("<br>");
+// document.write("<br>");
+// document.write("<br>");
+
+// document.write("Movil 3 <br>");
+// document.write("<br>");
+// document.write(movil3.movilInfo());
 
 
 // !Problema B
@@ -88,11 +88,6 @@ class Movil {
         this.camara = camara;
         this.ram = ram;
         this.encendido = false;
-        this.movilInfo = `Es ${color} <br>
-        Pesa ${peso} <br>
-        Tiene una resolucion de ${resolucion} <br>
-        Con una camara de ${camara} <br>
-        Y ${ram} de RAM <br>`;
     }
     botonEncender(){
         if (this.encendido == false) {
@@ -116,13 +111,13 @@ class Movil {
     grabarVideos(){
         alert(`Video grabado`)
     }
-    // movilInfo(){
-    //     return `Es ${color} <br>
-    //     Pesa ${peso} <br>
-    //     Tiene una resolucion de ${resolucion} <br>
-    //     Con una camara de ${camara} <br>
-    //     Y ${ram} de RAM <br>`
-    // }
+    movilInfo(){
+        return `Es <b>${this.color}</b> <br>
+        Pesa <b>${this.peso}</b> <br>
+        Tiene una resolucion de <b>${this.resolucion}</b> <br>
+        Con una camara de <b>${this.camara}</b> <br>
+        Y <b>${this.ram}</b> de RAM <br>`
+    }
     }
 
 
@@ -138,12 +133,12 @@ class altaGama extends Movil {
         alert("vamos a hacer un reconocimiento facial")
     };
     infoAlta(){
-        return this.movilInfo + `la cámara extra tiene una resolución de ${this.Extra} <br>`
+        return this.movilInfo() + `La cámara extra tiene una resolución de <b>${this.Extra}</b> <br>`
     };
 }
 
 let movilAltaGama1 = new altaGama("negro","120gr", "1440p", "20MP", "8GB", "4K")
-let movilAltaGama2 = new altaGama("blanco","110gr", "1440p", "27MP", "8GB")
+let movilAltaGama2 = new altaGama("blanco","110gr", "1440p", "27MP", "8GB", "5K")
 
 
 
@@ -151,13 +146,13 @@ document.write("Movil 1 <br>")
 document.write("<br>")
 document.write(movilAltaGama1.infoAlta())
 
-// document.write("<br>")
-// document.write("<br>")
-// document.write("<br>")
+document.write("<br>")
+document.write("<br>")
+document.write("<br>")
 
-// document.write("Movil 2 <br>")
-// document.write("<br>")
-// document.write(movilAltaGama2.altaInfo)
+document.write("Movil 2 <br>")
+document.write("<br>")
+document.write(movilAltaGama2.infoAlta())
 
 
 
